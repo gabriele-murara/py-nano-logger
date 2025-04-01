@@ -21,7 +21,7 @@ for file_entry in required_all:
 
 setup(
     name='nano_logger',
-    version='1.0.0-dev',
+    version='1.0.0',
     packages=find_packages(),
     include_package_data=True,
     license='MIT License',  # example license
