@@ -10,11 +10,26 @@ class NanoLogger:
         format_tpl += '[%(name)s:%(module)s:%(funcName)s:%(lineno)d] '
         format_tpl += '- %(message)s'
 
-        self.__name = kwargs.get("name", 'nano_logger')
-        self.__log_file_path = kwargs.get("log_file_path", None)
-        self.__log_level = kwargs.get("log_level", logging.DEBUG)
-        self.__write_to_console = kwargs.get("write_to_console", False)
-        self.__format = kwargs.get("format", format_tpl)
+        self.__name = kwargs.get(
+            "name",
+            os.getenv('NANO_LOGGER_NAME', default='nano_logger')
+        )
+        self.__log_file_path = kwargs.get(
+            "log_file_path",
+            os.getenv('NANO_LOGGER_FILE_PATH', default=None)
+        )
+        self.__log_level = kwargs.get(
+            "log_level",
+            os.getenv('NANO_LOGGER_LOG_LEVEL', default=logging.DEBUG)
+        )
+        self.__write_to_console = kwargs.get(
+            "write_to_console",
+            os.getenv('NANO_LOGGER_WRITE_TO_CONSOLE', default=False)
+        )
+        self.__format = kwargs.get(
+            "format",
+            os.getenv('NANO_LOGGER_FORMAT', default=format_tpl)
+        )
 
         self.__logger = logging.getLogger(self.__name)
         self.__logger.setLevel(self.__log_level)
