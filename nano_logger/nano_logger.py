@@ -162,3 +162,23 @@ class NanoLogger:
 
     def critical(self, msg):
         self.__logger.critical(msg, stacklevel=2)
+
+    @property
+    def name(self):
+        return self.__name
+
+    @property
+    def log_file_path(self):
+        return self.__log_file_path
+
+    @property
+    def log_level(self):
+        return self.__log_level
+
+    @property
+    def format(self):
+        return self.__format
+
+    @property
+    def suppress_warnings(self):
+        return self.__suppress_warnings
