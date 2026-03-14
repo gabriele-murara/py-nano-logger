@@ -1,6 +1,6 @@
 [project]
 name = "nano-logger"
-version = "1.1.0"
+version = "1.2.0-dev"
 description = "Simple wrapper for python logging"
 requires-python = ">=3.12"
 dependencies = [ "boolifyer==1.0.0",]
