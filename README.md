@@ -112,7 +112,7 @@ Alternatively, you can configure NanoLogger using environment variables:
 
 ```sh
 export NANO_LOGGER_NAME=nano_logger_from_env
-export NANO_LOGGER_LOG_LEVEL=/var/log/my-project/nano_logger_from_env.log
+export NANO_LOGGER_FILE_PATH=/var/log/my-project/nano_logger_from_env.log
 export NANO_LOGGER_LOG_LEVEL=INFO
 export NANO_LOGGER_WRITE_TO_CONSOLE=true
 export NANO_LOGGER_FORMAT="%(asctime)s %(process)d: %(levelname)s - %(message)s"
